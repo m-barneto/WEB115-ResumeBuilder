@@ -27,3 +27,17 @@ div#rightcol {
   width: 50%;
   float: right;
 }
+
+div#btndiv {
+  width: 39.1%;
+  margin: auto;
+}
+
+div>button {
+  width: 20%;
+  padding: 10px;
+  font-size: large;
+  border: 0px solid;
+  background-color: #333;
+  color: white;
+}
