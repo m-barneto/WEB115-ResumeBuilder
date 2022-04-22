@@ -11,3 +11,19 @@ fieldset {
   width: 39.1%;
   margin: auto;
 }
+
+textarea {
+  width: 100%;
+  height: 5em;
+}
+
+div#leftcol {
+  clear: both;
+  width: 50%;
+  float: left;
+}
+
+div#rightcol {
+  width: 50%;
+  float: right;
+}
