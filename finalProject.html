@@ -92,7 +92,7 @@
         <label for="objective">Career Objective:</label><br>
         <textarea id="objective"
           placeholder="Career objective, short description of what you want to do and what you stand for."></textarea>
-        <label for="devskills">Bulleted list of skills, use newlines to start the next bullet point.</label><br>
+        <label for="devskills">Bulleted list of skills: (Use newlines to start a new bullet point)</label><br>
         <textarea id="devskills" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
         <label for="project">Project of yours you'd like to showcase.</label><br>
         <textarea id="project" placeholder="Project challenges, descisions, and description."></textarea>
@@ -100,9 +100,9 @@
       </fieldset>
       <fieldset>
         <legend>Technical Proficiencies</legend>
-        <label for="languages">Known Languages: (Use newlines to start a new bullet point.)</label>
+        <label for="languages">Known Languages: (Use newlines to start a new bullet point)</label>
         <textarea id="languages" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
-        <label for="frameworks">Known Frameworks: (Use newlines to start a new bullet point.)</label>
+        <label for="frameworks">Known Frameworks: (Use newlines to start a new bullet point)</label>
         <textarea id="frameworks" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
       </fieldset>
       <fieldset>
@@ -118,7 +118,7 @@
         <label for="graddate">Date Graduated</label>
         <input id="graddate" type="date">
         <br><br>
-        <label for="certs">Certificates/Degrees: (Use newlines to start a new bullet point.)</label>
+        <label for="certs">Certificates/Degrees: (Use newlines to start a new bullet point)</label>
         <textarea id="certs" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
       </fieldset>
       <fieldset>
@@ -148,13 +148,14 @@
       <fieldset>
         <legend>References</legend>
         <label for="references">Enter references with contact info and their description: (Use newlines to start a new
-          bullet point.)</label>
+          bullet point)</label>
         <textarea id="references"
           placeholder="Roslyn S. (email@waketech.edu) - WEB115 Instructor&#10;Frank C. (email@waketech.edu) - CSC121 Instructor"></textarea>
       </fieldset>
       <br>
       <div id="btndiv">
-        <input type="submit" id="submit">Create Resume</button>
+        <input type="submit" class="formButton" id="submit" value="Create Resume">
+        <input type="button" class="formButton" id="fillfields" value="Fill Fields">
       </div>
     </form>
   </div>

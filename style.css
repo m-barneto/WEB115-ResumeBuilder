@@ -33,8 +33,8 @@ div#btndiv {
   margin: auto;
 }
 
-#submit {
-  width: 20%;
+.formButton {
+  width: auto;
   padding: 10px;
   font-size: large;
   border: 0px solid;
