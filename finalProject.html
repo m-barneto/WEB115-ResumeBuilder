@@ -19,142 +19,144 @@
     <h2>Resume Builder</h2>
   </div>
   <div class="content">
-    <fieldset>
-      <legend>Contact Info</legend>
+    <form>
+      <fieldset>
+        <legend>Contact Info</legend>
 
-      <div id="leftcol"><input id="name" placeholder="Full Name"></div>
-      <div id="rightcol">
-        <input list="states" id="state" placeholder="State">
-        <datalist id="states">
-          <option value="AK"></option>
-          <option value="AL"></option>
-          <option value="AR"></option>
-          <option value="AZ"></option>
-          <option value="CA"></option>
-          <option value="CO"></option>
-          <option value="CT"></option>
-          <option value="DE"></option>
-          <option value="FL"></option>
-          <option value="GA"></option>
-          <option value="HI"></option>
-          <option value="IA"></option>
-          <option value="ID"></option>
-          <option value="IL"></option>
-          <option value="IN"></option>
-          <option value="KS"></option>
-          <option value="KY"></option>
-          <option value="LA"></option>
-          <option value="MA"></option>
-          <option value="MD"></option>
-          <option value="ME"></option>
-          <option value="MI"></option>
-          <option value="MN"></option>
-          <option value="MO"></option>
-          <option value="MS"></option>
-          <option value="MT"></option>
-          <option value="NC"></option>
-          <option value="ND"></option>
-          <option value="NE"></option>
-          <option value="NH"></option>
-          <option value="NJ"></option>
-          <option value="NM"></option>
-          <option value="NV"></option>
-          <option value="NY"></option>
-          <option value="OH"></option>
-          <option value="OK"></option>
-          <option value="OR"></option>
-          <option value="PA"></option>
-          <option value="RI"></option>
-          <option value="SC"></option>
-          <option value="SD"></option>
-          <option value="TN"></option>
-          <option value="TX"></option>
-          <option value="UT"></option>
-          <option value="VA"></option>
-          <option value="VT"></option>
-          <option value="WA"></option>
-          <option value="WI"></option>
-          <option value="WV"></option>
-          <option value="WY"></option>
-        </datalist>
+        <div id="leftcol"><input id="name" placeholder="Full Name"></div>
+        <div id="rightcol">
+          <input list="states" id="state" placeholder="State">
+          <datalist id="states">
+            <option value="AK"></option>
+            <option value="AL"></option>
+            <option value="AR"></option>
+            <option value="AZ"></option>
+            <option value="CA"></option>
+            <option value="CO"></option>
+            <option value="CT"></option>
+            <option value="DE"></option>
+            <option value="FL"></option>
+            <option value="GA"></option>
+            <option value="HI"></option>
+            <option value="IA"></option>
+            <option value="ID"></option>
+            <option value="IL"></option>
+            <option value="IN"></option>
+            <option value="KS"></option>
+            <option value="KY"></option>
+            <option value="LA"></option>
+            <option value="MA"></option>
+            <option value="MD"></option>
+            <option value="ME"></option>
+            <option value="MI"></option>
+            <option value="MN"></option>
+            <option value="MO"></option>
+            <option value="MS"></option>
+            <option value="MT"></option>
+            <option value="NC"></option>
+            <option value="ND"></option>
+            <option value="NE"></option>
+            <option value="NH"></option>
+            <option value="NJ"></option>
+            <option value="NM"></option>
+            <option value="NV"></option>
+            <option value="NY"></option>
+            <option value="OH"></option>
+            <option value="OK"></option>
+            <option value="OR"></option>
+            <option value="PA"></option>
+            <option value="RI"></option>
+            <option value="SC"></option>
+            <option value="SD"></option>
+            <option value="TN"></option>
+            <option value="TX"></option>
+            <option value="UT"></option>
+            <option value="VA"></option>
+            <option value="VT"></option>
+            <option value="WA"></option>
+            <option value="WI"></option>
+            <option value="WV"></option>
+            <option value="WY"></option>
+          </datalist>
+        </div>
+        <div id="leftcol"><input type="email" id="email" placeholder="Email" required></div>
+        <div id="rightcol"><input id="city" placeholder="City"></div>
+        <div id="leftcol"><input type="tel" id="phone" placeholder="(123) 456-7890"></div>
+        <div id="rightcol"><input id="zip" placeholder="Zipcode"></div>
+        <div id="leftcol"><input type="url" id="linkedin" placeholder="LinkedIn"></div>
+        <div id="rightcol"><input id="address" placeholder="Address"></div>
+        <div id="leftcol"><input type="url" id="portfolio" placeholder="Portfolio"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Career/DevSkills</legend>
+        <label for="objective">Career Objective:</label><br>
+        <textarea id="objective"
+          placeholder="Career objective, short description of what you want to do and what you stand for."></textarea>
+        <label for="devskills">Bulleted list of skills, use newlines to start the next bullet point.</label><br>
+        <textarea id="devskills" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
+        <label for="project">Project of yours you'd like to showcase.</label><br>
+        <textarea id="project" placeholder="Project challenges, descisions, and description."></textarea>
+        <input id="projectlink" type="url" placeholder="Project Link">
+      </fieldset>
+      <fieldset>
+        <legend>Technical Proficiencies</legend>
+        <label for="languages">Known Languages: (Use newlines to start a new bullet point.)</label>
+        <textarea id="languages" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
+        <label for="frameworks">Known Frameworks: (Use newlines to start a new bullet point.)</label>
+        <textarea id="frameworks" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Education</legend>
+        <p>Leave entry blank to omit.</p>
+        <input id="school" placeholder="School Name">
+        <input id="schoollocation" placeholder="School Location">
+        <label for="graddate">Date Graduated</label>
+        <input id="graddate" type="date">
+        <br><br>
+        <input id="school" placeholder="School Name">
+        <input id="schoollocation" placeholder="School Location">
+        <label for="graddate">Date Graduated</label>
+        <input id="graddate" type="date">
+        <br><br>
+        <label for="certs">Certificates/Degrees: (Use newlines to start a new bullet point.)</label>
+        <textarea id="certs" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Previous Employment</legend>
+        <p>Leave entry blank to omit.</p>
+        <input id="job1" placeholder="Job Title">
+        <label for="entrydate1">Start</label>
+        <input id="entrydate1" type="date">
+        <label for="exitdate1">End</label>
+        <input id="exitdate1" type="date"><br>
+        <textarea id="jobdesc1" placeholder="Description of experience gained."></textarea>
+        <br><br>
+        <input id="job2" placeholder="Job Title">
+        <label for="entrydate2">Start</label>
+        <input id="entrydate2" type="date">
+        <label for="exitdate2">End</label>
+        <input id="exitdate2" type="date"><br>
+        <textarea id="jobdesc2" placeholder="Description of experience gained."></textarea>
+        <br><br>
+        <input id="job3" placeholder="Job Title">
+        <label for="entrydate3">Start</label>
+        <input id="entrydate3" type="date">
+        <label for="exitdate3">End</label>
+        <input id="exitdate3" type="date"><br>
+        <textarea id="jobdesc3" placeholder="Description of experience gained."></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>References</legend>
+        <label for="references">Enter references with contact info and their description: (Use newlines to start a new
+          bullet point.)</label>
+        <textarea id="references"
+          placeholder="Roslyn S. (email@waketech.edu) - WEB115 Instructor&#10;Frank C. (email@waketech.edu) - CSC121 Instructor"></textarea>
+      </fieldset>
+      <br>
+      <div id="btndiv">
+        <input type="submit" id="submit">Create Resume</button>
       </div>
-      <div id="leftcol"><input type="email" id="email" placeholder="Email"></div>
-      <div id="rightcol"><input id="city" placeholder="City"></div>
-      <div id="leftcol"><input type="tel" id="phone" placeholder="(123) 456-7890"></div>
-      <div id="rightcol"><input id="zip" placeholder="Zipcode"></div>
-      <div id="leftcol"><input type="url" id="linkedin" placeholder="LinkedIn"></div>
-      <div id="rightcol"><input id="address" placeholder="Address"></div>
-      <div id="leftcol"><input type="url" id="portfolio" placeholder="Portfolio"></div>
-    </fieldset>
-    <fieldset>
-      <legend>Career/DevSkills</legend>
-      <label for="objective">Career Objective:</label><br>
-      <textarea id="objective"
-        placeholder="Career objective, short description of what you want to do and what you stand for."></textarea>
-      <label for="devskills">Bulleted list of skills, use newlines to start the next bullet point.</label><br>
-      <textarea id="devskills" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
-      <label for="project">Project of yours you'd like to showcase.</label><br>
-      <textarea id="project" placeholder="Project challenges, descisions, and description."></textarea>
-      <input id="projectlink" type="url" placeholder="Project Link">
-    </fieldset>
-    <fieldset>
-      <legend>Technical Proficiencies</legend>
-      <label for="languages">Known Languages: (Use newlines to start a new bullet point.)</label>
-      <textarea id="languages" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
-      <label for="frameworks">Known Frameworks: (Use newlines to start a new bullet point.)</label>
-      <textarea id="frameworks" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
-    </fieldset>
-    <fieldset>
-      <legend>Education</legend>
-      <p>Leave entry blank to omit.</p>
-      <input id="school" placeholder="School Name">
-      <input id="schoollocation" placeholder="School Location">
-      <label for="graddate">Date Graduated</label>
-      <input id="graddate" type="date">
-      <br><br>
-      <input id="school" placeholder="School Name">
-      <input id="schoollocation" placeholder="School Location">
-      <label for="graddate">Date Graduated</label>
-      <input id="graddate" type="date">
-      <br><br>
-      <label for="certs">Certificates/Degrees: (Use newlines to start a new bullet point.)</label>
-      <textarea id="certs" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
-    </fieldset>
-    <fieldset>
-      <legend>Previous Employment</legend>
-      <p>Leave entry blank to omit.</p>
-      <input id="job1" placeholder="Job Title">
-      <label for="entrydate1">Start</label>
-      <input id="entrydate1" type="date">
-      <label for="exitdate1">End</label>
-      <input id="exitdate1" type="date"><br>
-      <textarea id="jobdesc1" placeholder="Description of experience gained."></textarea>
-      <br><br>
-      <input id="job2" placeholder="Job Title">
-      <label for="entrydate2">Start</label>
-      <input id="entrydate2" type="date">
-      <label for="exitdate2">End</label>
-      <input id="exitdate2" type="date"><br>
-      <textarea id="jobdesc2" placeholder="Description of experience gained."></textarea>
-      <br><br>
-      <input id="job3" placeholder="Job Title">
-      <label for="entrydate3">Start</label>
-      <input id="entrydate3" type="date">
-      <label for="exitdate3">End</label>
-      <input id="exitdate3" type="date"><br>
-      <textarea id="jobdesc3" placeholder="Description of experience gained."></textarea>
-    </fieldset>
-    <fieldset>
-      <legend>References</legend>
-      <label for="references">Enter references with contact info and their description: (Use newlines to start a new
-        bullet point.)</label>
-      <textarea id="references"
-        placeholder="Roslyn S. (email@waketech.edu) - WEB115 Instructor&#10;Frank C. (email@waketech.edu) - CSC121 Instructor"></textarea>
-    </fieldset>
-    <br>
-    <div id="btndiv">
-      <button id="submit">Create Resume</button>
-    </div>
+    </form>
   </div>
   <script type="text/javascript" src="projectJS.js"></script>
 </body>
