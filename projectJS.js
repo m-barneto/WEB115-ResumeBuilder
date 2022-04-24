@@ -17,12 +17,12 @@ function generateResume() {
   let address = getValue("address");
 
   let objective = getValue("objective");
-  let devskills = getValue("devskills");
+  let devskills = getValue("devskills").toString().split('\n');
   let project = getValue("project");
   let projectlink = getValue("projectlink");
 
-  let languages = getValue("languages");
-  let frameworks = getValue("frameworks");
+  let languages = getValue("languages").toString().split('\n');
+  let frameworks = getValue("frameworks").toString().split('\n');
 
   let schoolName1 = getValue("school1");
   let schoolLoc1 = getValue("schoollocation1");
@@ -32,7 +32,7 @@ function generateResume() {
   let schoolLoc2 = getValue("schoollocation2");
   let graddate2 = getValue("graddate2");
 
-  let certs = getValue("certs");
+  let certs = getValue("certs").toString().split('\n');
 
   let jobName1 = getValue("job1");
   let jobStart1 = getValue("entrydate1");
@@ -49,7 +49,9 @@ function generateResume() {
   let jobEnd3 = getValue("exitdate3");
   let jobDesc3 = getValue("jobdesc3");
 
-  let references = getValue("references");
+  let references = getValue("references").toString().split('\n');
+
+  console.log(graddate1);
 }
 
 document.getElementById("fillfields").addEventListener("click", fillFields);
@@ -66,32 +68,38 @@ function fillFields() {
   document.getElementById("address").value = "123 Oakridge rd";
 
 
-  document.getElementById("objective").value = "";
-  document.getElementById("devskills").value = "";
-  document.getElementById("project").value = "";
-  document.getElementById("projectlink").value = "";
+  document.getElementById("objective").value =
+    ```Current student at Wake Tech Community College. I am pursuing an associates in programming and development with a specialization in C++ and Java. 
+    I'm looking for a job in software development but have experience with projects in a multitude of environments and stacks.```;
+  document.getElementById("devskills").value =
+    ```Hardworking, with a desire to create something I can be proud to show and represent.\n
+    Love trying new frameworks and languages and recreating/improving upon old projects to become familiar in new environments.\n
+    Familiar in Unix, Windows, and tinkering with microcontrollers like the Arduino and Teensy 3.
+    ```;
+  document.getElementById("project").value = "Particle system that uses Perlin noise to drive the movement of particles. Forming groups of particles that follow similar paths. Each particle paints a small amount onto the canvas to create a string-like field.";
+  document.getElementById("projectlink").value = "https://www.youtube.com/watch?v=8_zC0eIjtkM";
 
 
-  document.getElementById("languages").value = "";
-  document.getElementById("frameworks").value = "";
+  document.getElementById("languages").value = "C++\nC#\nJava\nJavascript\nPython\nAutoHotkey";
+  document.getElementById("frameworks").value = "SFML\nSDL\nUnityEngine\nASP.NET\nWinForm\nSelenium\nProcessing\nFabric\nReactJS\nDiscord";
 
 
-  document.getElementById("school1").value = "";
-  document.getElementById("schoollocation1").value = "";
-  document.getElementById("graddate1").value = "";
+  document.getElementById("school1").value = "Wake STEM Early College High School";
+  document.getElementById("schoollocation1").value = "Raleigh";
+  document.getElementById("graddate1").value = "2020-12-12"; //2020
 
-  document.getElementById("school2").value = "";
-  document.getElementById("schoollocation2").value = "";
-  document.getElementById("graddate2").value = "";
-
-
-  document.getElementById("certs").value = "";
+  document.getElementById("school2").value = "Wake Tech Community College";
+  document.getElementById("schoollocation2").value = "Raleigh";
+  document.getElementById("graddate2").value = "Current";
 
 
-  document.getElementById("job1").value = "";
-  document.getElementById("entrydate1").value = "";
-  document.getElementById("exitdate1").value = "";
-  document.getElementById("jobdesc1").value = "";
+  document.getElementById("certs").value = "SoloLearn: C++, C#";
+
+
+  document.getElementById("job1").value = "Coffee Shop";
+  document.getElementById("entrydate1").value = "2020-4-4";
+  document.getElementById("exitdate1").value = "Current";
+  document.getElementById("jobdesc1").value = "Working as a barista I've developed a love for creating things with my hands. As well as creating and maintaining relationships with customers.";
 
   document.getElementById("job2").value = "";
   document.getElementById("entrydate2").value = "";
@@ -104,5 +112,5 @@ function fillFields() {
   document.getElementById("jobdesc3").value = "";
 
 
-  document.getElementById("").value = "";
+  document.getElementById("references").value = "Roslyn S. (email@waketech.edu) - WEB115 Instructor\nFrank C. (email@waketech.edu) - CSC121 Instructor";
 }
