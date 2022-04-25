@@ -17,13 +17,13 @@ textarea {
   height: 5em;
 }
 
-div#leftcol {
+div.leftcol {
   clear: both;
   width: 50%;
   float: left;
 }
 
-div#rightcol {
+div.rightcol {
   width: 50%;
   float: right;
 }

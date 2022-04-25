@@ -23,8 +23,8 @@
       <fieldset>
         <legend>Contact Info</legend>
 
-        <div id="leftcol"><input id="name" placeholder="Full Name"></div>
-        <div id="rightcol">
+        <div class="leftcol"><input id="name" placeholder="Full Name"></div>
+        <div class="rightcol">
           <input list="states" id="state" placeholder="State">
           <datalist id="states">
             <option value="AK"></option>
@@ -79,13 +79,14 @@
             <option value="WY"></option>
           </datalist>
         </div>
-        <div id="leftcol"><input type="email" id="email" placeholder="Email" required></div>
-        <div id="rightcol"><input id="city" placeholder="City"></div>
-        <div id="leftcol"><input type="tel" id="phone" placeholder="(123) 456-7890"></div>
-        <div id="rightcol"><input id="zip" placeholder="Zipcode"></div>
-        <div id="leftcol"><input type="url" id="linkedin" placeholder="LinkedIn"></div>
-        <div id="rightcol"><input id="address" placeholder="Address"></div>
-        <div id="leftcol"><input type="url" id="portfolio" placeholder="Portfolio"></div>
+        <div class="leftcol"><input type="email" id="email" placeholder="Email" required></div>
+        <div class="rightcol"><input id="city" placeholder="City"></div>
+        <div class="leftcol"><input type="tel" id="phone" placeholder="(123) 456-7890"></div>
+        <div class="rightcol"><input id="zip" placeholder="Zipcode"></div>
+        <div class="leftcol"><input type="url" id="linkedin" placeholder="LinkedIn"></div>
+        <div class="rightcol"><input id="address" placeholder="Address"></div>
+        <div class="leftcol"><input type="url" id="portfolio" placeholder="Portfolio"></div>
+        <div class="leftcol"><input type="url" id="picture" placeholder="Picture URL"></div>
       </fieldset>
       <fieldset>
         <legend>Career/DevSkills</legend>
@@ -108,6 +109,7 @@
       <fieldset>
         <legend>Education</legend>
         <p>Leave entry blank to omit.</p>
+        <p>Leave date blank if still currently enrolled.</p>
         <input id="school1" placeholder="School Name">
         <input id="schoollocation1" placeholder="School Location">
         <label for="graddate1">Date Graduated</label>
@@ -124,6 +126,7 @@
       <fieldset>
         <legend>Previous Employment</legend>
         <p>Leave entry blank to omit.</p>
+        <p>Leave date blank if still currently working.</p>
         <input id="job1" placeholder="Job Title">
         <label for="entrydate1">Start</label>
         <input id="entrydate1" type="date">

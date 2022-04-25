@@ -1,0 +1,118 @@
+* {
+  font-family: 'Roboto Mono', monospace;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 30%;
+  height: 100%;
+  background-color: #2A3949;
+}
+
+.sidebar>.center-img {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  margin: 15px;
+}
+
+.sidebar>.center-img>img {
+  object-fit: cover;
+  width: 24vw;
+  height: 24vw;
+  border-radius: 24vw;
+}
+
+.sidebar>p {
+  color: peachpuff;
+  margin: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+
+.sidebar>p,
+li {
+  font-size: smaller;
+}
+
+.sidebar>h3 {
+  color: peachpuff;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.sidebar>hr {
+  width: 90%;
+  background-color: peachpuff;
+  border: 0px;
+  height: 2px;
+  margin: 10px;
+}
+
+.sidebar>ul>li {
+  padding: 5px;
+  color: peachpuff;
+}
+
+.sidebar>ul {
+  padding-left: 20px;
+  margin: 2px;
+  align-items: flex-start;
+}
+
+div.leftcol {
+
+  clear: both;
+  width: 50%;
+  float: left;
+}
+
+div.rightcol {
+  width: 50%;
+  float: right;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  margin: 15px;
+}
+
+.content>.heading {
+  height: 24vw;
+  width: 100%;
+  background-color: aliceblue;
+  margin: 0;
+  padding: 0;
+}
+
+.content>.heading>.leftcol>h1 {
+  margin: 0px;
+  color: #2A3949;
+}
+
+.content>.heading>.leftcol {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.content>.heading>.rightcol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
