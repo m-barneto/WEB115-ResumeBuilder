@@ -55,7 +55,7 @@ li {
 }
 
 .sidebar>hr {
-  width: 90%;
+  width: calc(100% - 20px);
   background-color: peachpuff;
   border: 0px;
   height: 2px;
@@ -64,7 +64,7 @@ li {
 
 .sidebar>ul>li {
   padding: 5px;
-  color: peachpuff;
+  color: white;
 }
 
 .sidebar>ul {
@@ -95,7 +95,7 @@ div.rightcol {
   height: 24vw;
   width: 100%;
   margin: 15px;
-  padding: 0;
+  padding: 0px;
 }
 
 .content>.heading>.leftcol>h1 {
@@ -131,16 +131,38 @@ span {
   margin: 7px;
 }
 
+.content>.body {
+  margin: 15px;
+}
+
 .content>.body>h3 {
-  color: peachpuff;
+  color: #2A3949;
   margin: 0;
-  margin-left: 5px;
+  font-weight: bold;
 }
 
 .content>.body>hr {
-  width: 90%;
-  background-color: peachpuff;
+  background-color: #2A3949;
   border: 0px;
   height: 2px;
-  margin: 10px;
+  margin-top: 24px;
+}
+
+.content>.body>.job {
+  height: 100px;
+  /* Max between leftcol & rightcol's height */
+}
+
+.content>.body>div>div>h4,
+h5 {
+  margin: 5px;
+  color: #2A3949;
+}
+
+.content>.body>div>div.leftcol {
+  width: 40%;
+}
+
+.content>.body>div>div.rightcol {
+  width: 60%;
 }

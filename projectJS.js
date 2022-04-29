@@ -37,16 +37,19 @@ function generateResume() {
   let certs = getValue("certs").toString().split('\n');
 
   let jobName1 = getValue("job1");
+  let jobTitle1 = getValue("job1title");
   let jobStart1 = getValue("entrydate1");
   let jobEnd1 = getValue("exitdate1");
   let jobDesc1 = getValue("jobdesc1");
 
   let jobName2 = getValue("job2");
+  let jobTitle2 = getValue("job2title");
   let jobStart2 = getValue("entrydate2");
   let jobEnd2 = getValue("exitdate2");
   let jobDesc2 = getValue("jobdesc2");
 
   let jobName3 = getValue("job3");
+  let jobTitle3 = getValue("job3title");
   let jobStart3 = getValue("entrydate3");
   let jobEnd3 = getValue("exitdate3");
   let jobDesc3 = getValue("jobdesc3");
@@ -92,7 +95,7 @@ function fillFields() {
     `Current student at Wake Tech Community College. I'm pursuing an associates in programming and development with a specialization in C++ and Java. 
     I'm looking for a job in software development but have experience with projects in a multitude of environments and stacks.`;
   document.getElementById("devskills").value =
-    `Hardworking, with a desire to create something I can be proud to show and represent.\n
+    `Persistant, with a desire to create something I can be proud to be a part of.\n
     Love trying new frameworks and languages and recreating/improving upon old projects to become familiar in new environments.\n
     Familiar in Unix, Windows, and tinkering with microcontrollers like the Arduino and Teensy 3.
     `;
@@ -117,16 +120,19 @@ function fillFields() {
 
 
   document.getElementById("job1").value = "Coffee Shop";
+  document.getElementById("job1title").value = "Barista";
   document.getElementById("entrydate1").value = "2020-04-04";
   document.getElementById("exitdate1").value = "";
   document.getElementById("jobdesc1").value = "Working as a barista I've developed a love for creating things with my hands. As well as creating and maintaining relationships with customers.";
 
   document.getElementById("job2").value = "";
+  document.getElementById("job2title").value = "";
   document.getElementById("entrydate2").value = "";
   document.getElementById("exitdate2").value = "";
   document.getElementById("jobdesc2").value = "";
 
   document.getElementById("job3").value = "";
+  document.getElementById("job3title").value = "";
   document.getElementById("entrydate3").value = "";
   document.getElementById("exitdate3").value = "";
   document.getElementById("jobdesc3").value = "";
