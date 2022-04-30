@@ -92,27 +92,27 @@ div.rightcol {
   margin: 0px;
 }
 
-.content>.heading {
+.heading {
   height: 24vw;
   width: 100%;
   margin: 15px;
   padding: 0px;
 }
 
-.content>.heading>.leftcol>h1 {
+.heading>.leftcol>h1 {
   margin: 0px;
   font-size: 50px;
   color: #2A3949;
 }
 
-.content>.heading>.leftcol {
+.heading>.leftcol {
   display: flex;
   align-items: center;
   height: 100%;
   width: 70%;
 }
 
-.content>.heading>.rightcol {
+.heading>.rightcol {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,23 +120,23 @@ div.rightcol {
   width: 30%;
 }
 
-.content>.heading>.rightcol>div {
+.heading>.rightcol>div {
   display: flex;
   align-items: center;
 }
 
-.content>.heading>.rightcol>div>p,
-span {
+.rightcol>div>p,
+.rightcol>div>span {
   display: inline;
   color: #2A3949;
   margin: 7px;
 }
 
-.content>.body {
+.body {
   margin: 15px;
 }
 
-.content>.body>h3 {
+.body>h3 {
   color: #2A3949;
   margin: 0;
   font-weight: bold;
@@ -146,13 +146,13 @@ span {
   margin-top: 24px;
 }
 
-.content>.body>hr {
+.body>hr {
   background-color: #2A3949;
   border: 0px;
   height: 2px;
 }
 
-.content>.body>.job,
+.job,
 .education {
   height: 90px;
   /* Max between leftcol & rightcol's height */
@@ -162,41 +162,46 @@ span {
   height: 250px;
 }
 
-.content>.body>div>div>h4,
-.content>.body>div>div>h5,
-.content>.body>div>div>div>h6 {
+.body>div>div>h4,
+.body>div>div>h5,
+.body>div>div>div>h6 {
   margin: 5px;
   color: #2A3949;
 }
 
-.content>.body>div>div>div>h6 {
+.body>div>div>div>h6 {
   font-weight: 400;
 }
 
-.content>.body>div>div>div.leftcol {
+.body>div>div>.leftcol,
+.body>div>.leftcol {
   width: 40%;
 }
 
-.content>.body>div>div>div.rightcol {
+.body>div>div>.rightcol,
+.body>div>.rightcol {
   width: 60%;
 }
 
-.content>.body>.skills>h4,
-h5,
-ul {
+.job>div>div>h5,
+.education>div>div>h5,
+.skills>h4,
+.skills>h5,
+.skills>div>ul,
+.project>a>h5 {
   margin: 5px;
   color: #2A3949;
 }
 
-.content>.body>.skills>ul {
+.skills>ul {
   margin-top: 0px;
 }
 
-.content>.body>.skills>h5 {
+.skills>h5 {
   margin-bottom: 0px;
 }
 
-.content>.body>.project>p {
+.project>p {
   font-size: smaller;
   color: #2A3949;
   margin: 0px;

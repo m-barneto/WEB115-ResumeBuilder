@@ -3,7 +3,7 @@ function getValue(id) {
 }
 
 document.getElementById("submit").addEventListener("click", generateResume);
-fillFields();
+//fillFields();
 function generateResume() {
   if (!document.getElementById("email").validity.valid) return;
   let name = getValue("name");
