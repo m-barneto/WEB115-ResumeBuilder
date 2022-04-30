@@ -148,9 +148,14 @@ span {
   margin-top: 24px;
 }
 
-.content>.body>.job {
-  height: 100px;
+.content>.body>.job,
+.education {
+  height: 110px;
   /* Max between leftcol & rightcol's height */
+}
+
+.skills {
+  height: 250px;
 }
 
 .content>.body>div>div>h4,
@@ -165,4 +170,26 @@ h5 {
 
 .content>.body>div>div.rightcol {
   width: 60%;
+}
+
+.content>.body>.skills>h4,
+h5,
+ul {
+  margin: 5px;
+  color: #2A3949;
+}
+
+.content>.body>.skills>ul {
+  margin-top: 0px;
+}
+
+.content>.body>.skills>h5 {
+  margin-bottom: 0px;
+}
+
+.content>.body>.project>p {
+  font-size: smaller;
+  color: #2A3949;
+  margin: 0px;
+  margin-left: 10px;
 }

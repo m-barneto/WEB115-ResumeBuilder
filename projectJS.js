@@ -99,21 +99,24 @@ function fillFields() {
     Love trying new frameworks and languages and recreating/improving upon old projects to become familiar in new environments.\n
     Familiar in Unix, Windows, and tinkering with microcontrollers like the Arduino and Teensy 3.
     `;
-  document.getElementById("project").value = "Particle system that uses Perlin noise to drive the movement of particles. Forming groups of particles that follow similar paths. Each particle paints a small amount onto the canvas to create a string-like field.";
+  document.getElementById("project").value = "Particle Flow Field";
+  document.getElementById("projectdesc").value = "Particle system that uses Perlin noise to drive the movement of particles. Forming groups of particles that follow similar paths. Each particle paints a small amount onto the canvas to create a string-like field.";
   document.getElementById("projectlink").value = "https://www.youtube.com/watch?v=8_zC0eIjtkM";
 
 
-  document.getElementById("languages").value = "C++\nC#\nJava\nJavascript\nPython\nAutoHotkey";
-  document.getElementById("frameworks").value = "SFML\nSDL\nUnityEngine\nASP.NET\nWinForm\nSelenium\nProcessing\nFabric\nReactJS\nDiscord";
+  document.getElementById("languages").value = "C++\nJavascript\nJava\nC#\nPython\nAutoHotkey";
+  document.getElementById("frameworks").value = "SFML,SDL,Windows API,OpenFrameworks\nReactJS,NodeJS,Express\nProcessing,Fabric,Selenium\nASP.NET,Selenium,UnityEngine,WinForm\nOpenCL,Discord.py,PyGame\n,";
 
 
   document.getElementById("school1").value = "Wake STEM Early College High School";
   document.getElementById("schoollocation1").value = "Raleigh";
-  document.getElementById("graddate1").value = "2020-12-12"; //2020
+  document.getElementById("graddate1").value = "2020-12-12";
+  document.getElementById("graddeg1").value = "GED"
 
   document.getElementById("school2").value = "Wake Tech Community College";
   document.getElementById("schoollocation2").value = "Raleigh";
   document.getElementById("graddate2").value = "";
+  document.getElementById("graddeg2").value = "Associates in Computer Programming"
 
 
   document.getElementById("certs").value = "SoloLearn: C++, C#";

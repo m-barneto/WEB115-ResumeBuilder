@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <!--Name: Matthew Barneto
@@ -96,15 +96,18 @@
         <label for="devskills">Bulleted list of skills: (Use newlines to start a new bullet point)</label><br>
         <textarea id="devskills" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
         <label for="project">Project of yours you'd like to showcase.</label><br>
-        <textarea id="project" placeholder="Project challenges, descisions, and description."></textarea>
+        <input id="project" placeholder="Project Title">
+        <textarea id="projectdesc" placeholder="Project challenges, descisions, and description."></textarea>
         <input id="projectlink" type="url" placeholder="Project Link">
       </fieldset>
       <fieldset>
         <legend>Technical Proficiencies</legend>
         <label for="languages">Known Languages: (Use newlines to start a new bullet point)</label>
         <textarea id="languages" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
-        <label for="frameworks">Known Frameworks: (Use newlines to start a new bullet point)</label>
-        <textarea id="frameworks" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
+        <label for="frameworks">Known Frameworks: (Use newlines when moving to the next language, separate each
+          framework with a comma)</label>
+        <textarea id="frameworks"
+          placeholder="lang 1 framework 1,framework 2,framework 3&#10;,   (lang 2 has no frameworks)&#10;lang 3 framework 1,framework 2"></textarea>
       </fieldset>
       <fieldset>
         <legend>Education</legend>
@@ -113,12 +116,14 @@
         <input id="school1" placeholder="School Name">
         <input id="schoollocation1" placeholder="School Location">
         <label for="graddate1">Date Graduated</label>
-        <input id="graddate1" type="date">
+        <input id="graddate1" type="date"><br>
+        <input id="graddeg1" placeholder="Degree">
         <br><br>
         <input id="school2" placeholder="School Name">
         <input id="schoollocation2" placeholder="School Location">
         <label for="graddate2">Date Graduated</label>
-        <input id="graddate2" type="date">
+        <input id="graddate2" type="date"><br>
+        <input id="graddeg2" placeholder="Degree">
         <br><br>
         <label for="certs">Certificates/Degrees: (Use newlines to start a new bullet point)</label>
         <textarea id="certs" placeholder="bullet one&#10;bullet two&#10;bullet three"></textarea>
@@ -165,7 +170,7 @@
       </div>
     </form>
   </div>
-  <script type="text/javascript" src="projectJS.js"></script>
+  <script src="projectJS.js"></script>
 </body>
 
 </html>
