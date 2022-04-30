@@ -44,14 +44,15 @@ body {
 
 
 .sidebar>p,
-li {
+.sidebar>ul>li,
+.content>.body>div>div>ul>li {
   font-size: smaller;
 }
 
 .sidebar>h3 {
   color: peachpuff;
   margin: 0;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .sidebar>hr {
@@ -68,7 +69,7 @@ li {
 }
 
 .sidebar>ul {
-  padding-left: 20px;
+  padding-left: 25px;
   margin: 2px;
   align-items: flex-start;
 }
@@ -141,16 +142,19 @@ span {
   font-weight: bold;
 }
 
+#top-hr {
+  margin-top: 24px;
+}
+
 .content>.body>hr {
   background-color: #2A3949;
   border: 0px;
   height: 2px;
-  margin-top: 24px;
 }
 
 .content>.body>.job,
 .education {
-  height: 110px;
+  height: 90px;
   /* Max between leftcol & rightcol's height */
 }
 
@@ -159,16 +163,21 @@ span {
 }
 
 .content>.body>div>div>h4,
-h5 {
+.content>.body>div>div>h5,
+.content>.body>div>div>div>h6 {
   margin: 5px;
   color: #2A3949;
 }
 
-.content>.body>div>div.leftcol {
+.content>.body>div>div>div>h6 {
+  font-weight: 400;
+}
+
+.content>.body>div>div>div.leftcol {
   width: 40%;
 }
 
-.content>.body>div>div.rightcol {
+.content>.body>div>div>div.rightcol {
   width: 60%;
 }
 
