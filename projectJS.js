@@ -3,7 +3,7 @@ function getValue(id) {
 }
 
 document.getElementById("submit").addEventListener("click", generateResume);
-//fillFields();
+fillFields();
 function generateResume() {
   if (!document.getElementById("email").validity.valid) return;
   let name = getValue("name");
@@ -12,7 +12,7 @@ function generateResume() {
   let linkedin = getValue("linkedin");
   let portfolio = getValue("portfolio");
   let picture = getValue("picture");
-  console.log(picture);
+
   let state = getValue("state");
   let city = getValue("city");
   let zip = getValue("zip");
