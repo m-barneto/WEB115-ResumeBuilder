@@ -109,7 +109,7 @@ div.rightcol {
   display: flex;
   align-items: center;
   height: 100%;
-  width: 70%;
+  width: 55%;
 }
 
 .heading>.rightcol {
@@ -117,7 +117,7 @@ div.rightcol {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  width: 30%;
+  width: 45%;
 }
 
 .heading>.rightcol>div {
@@ -206,4 +206,11 @@ div.rightcol {
   color: #2A3949;
   margin: 0px;
   margin-left: 10px;
+}
+
+.refs>h4 {
+  color: #2A3949;
+  margin: 0px;
+  margin-left: 10px;
+  margin-bottom: 5px;
 }

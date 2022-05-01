@@ -2,17 +2,26 @@ function getValue(id) {
   return document.getElementById(id).value;
 }
 
+function getDate(id) {
+  let value = document.getElementById(id).value;
+  if (value == "") return "Current";
+  let date = new Date(value);
+  let val = date.toLocaleString('default', { month: 'short' }) + " " + date.getFullYear();
+  return val;
+}
+
 document.getElementById("submit").addEventListener("click", generateResume);
 fillFields();
 function generateResume() {
   if (!document.getElementById("email").validity.valid) return;
-  let name = getValue("name");
+  let name = getValue("name").toString().split(' ');
+  let firstname = name[0];
+  let lastname = name[1];
   let email = getValue("email");
   let phone = getValue("phone");
   let linkedin = getValue("linkedin");
   let portfolio = getValue("portfolio");
   let picture = getValue("picture");
-  console.log(picture);
 
   let state = getValue("state");
   let city = getValue("city");
@@ -23,41 +32,52 @@ function generateResume() {
   let devskills = getValue("devskills").toString().split('\n');
   let project = getValue("project");
   let projectlink = getValue("projectlink");
+  let projectdesc = getValue("projectdesc");
 
   let languages = getValue("languages").toString().split('\n');
   let frameworks = getValue("frameworks").toString().split('\n');
 
   let schoolName1 = getValue("school1");
   let schoolLoc1 = getValue("schoollocation1");
-  let graddate1 = getValue("graddate1");
+  let schoolStart1 = getDate("schoolStart1");
+  let schoolEnd1 = getDate("schoolEnd1");
+  let schoolDeg1 = getValue("schoolDeg1");
+  let schoolDesc1 = getValue("schoolDesc1");
 
   let schoolName2 = getValue("school2");
   let schoolLoc2 = getValue("schoollocation2");
-  let graddate2 = getValue("graddate2");
+  let schoolStart2 = getDate("schoolStart2");
+  let schoolEnd2 = getDate("schoolEnd2");
+  let schoolDeg2 = getValue("schoolDeg2");
+  let schoolDesc2 = getValue("schoolDesc2");
 
   let certs = getValue("certs").toString().split('\n');
 
   let jobName1 = getValue("job1");
   let jobTitle1 = getValue("job1title");
-  let jobStart1 = getValue("entrydate1");
-  let jobEnd1 = getValue("exitdate1");
+  let jobLoc1 = getValue("job1location");
+  let jobStart1 = getDate("entrydate1");
+  console.log(jobStart1);
+  let jobEnd1 = getDate("exitdate1");
   let jobDesc1 = getValue("jobdesc1");
 
   let jobName2 = getValue("job2");
   let jobTitle2 = getValue("job2title");
-  let jobStart2 = getValue("entrydate2");
-  let jobEnd2 = getValue("exitdate2");
+  let jobLoc2 = getValue("job2location");
+  let jobStart2 = getDate("entrydate2");
+  let jobEnd2 = getDate("exitdate2");
   let jobDesc2 = getValue("jobdesc2");
 
   let jobName3 = getValue("job3");
   let jobTitle3 = getValue("job3title");
-  let jobStart3 = getValue("entrydate3");
-  let jobEnd3 = getValue("exitdate3");
+  let jobLoc3 = getValue("job3location");
+  let jobStart3 = getDate("entrydate3");
+  let jobEnd3 = getDate("exitdate3");
   let jobDesc3 = getValue("jobdesc3");
 
   let references = getValue("references").toString().split('\n');
 
-  let flyWindow = window.open('about:blank', 'myPop');
+  let flyWindow = window.open('about:blank');
   let myText = `
   <!DOCTYPE html>
 <html lang="en">
@@ -94,131 +114,150 @@ function generateResume() {
     `</ul>
     <hr>
       <h3>CERTIFICATES</h3>
-      <ul>
-        <li>C++ (Sololearn)</li>
-        <li>C# (Sololearn)</li>
-      </ul>
+      <ul>\n`
+  certs.forEach(cert => {
+    myText += `<li>${cert}</li>\n`;
+    console.log(cert);
+  });
+  myText += `</ul>
       <hr>
       </div>
       <div class="content">
         <div class="heading">
           <div class="leftcol">
-            <h1>MATTHEW<br>BARNETO</h1>
+            <h1>${firstname + (name[1] == null ? "" : `<br>${lastname}`)}</h1>
           </div>
           <div class="rightcol">
             <div>
               <span class="material-icons">place</span>
-              <p>Address</p>
+              <p>${address}</p>
             </div>
             <div>
               <span class="material-icons">call</span>
-              <p>Phone #</p>
+              <p>${phone}</p>
             </div>
             <div>
               <span class="material-icons">mail</span>
-              <p>Email</p>
+              <p>${email}</p>
             </div>
           </div>
         </div>
         <div class="body">
           <hr id="top-hr">
             <h3>WORK EXPERIENCE</h3>
-            <div class="job">
-              <div>
-                <div class="leftcol">
-                  <h5>Coffee Shop</h5>
-                  <h6>Apr 2020 - Current</h6>
-                  <h6>Raleigh, NC</h6>
-                </div>
-                <div class="rightcol">
-                  <h5>Barista</h5>
-                  <h6>Working as a barista I've developed a love for creating things with my hands. As well as creating and
-                    maintaining relationships with customers.</h6>
-                </div>
-              </div>
-            </div>
-
+            <div class="job">\n`;
+  if (jobName1 != "") {
+    myText += `<div>
+    <div class="leftcol">
+      <h5>${jobName1}</h5>
+      <h6>${jobStart1} - ${jobEnd1}</h6>
+      <h6>${jobLoc1}</h6>
+    </div>
+    <div class="rightcol">
+      <h5>${jobTitle1}</h5>
+      <h6>${jobDesc1}</h6>
+    </div>
+  </div>\n`;
+  }
+  if (jobName2 != "") {
+    myText += `<div>
+    <div class="leftcol">
+      <h5>${jobName2}</h5>
+      <h6>${jobStart2} - ${jobEnd2}</h6>
+      <h6>${jobLoc2}</h6>
+    </div>
+    <div class="rightcol">
+      <h5>${jobTitle2}</h5>
+      <h6>${jobDesc2}</h6>
+    </div>
+  </div>\n`;
+  }
+  if (jobName3 != "") {
+    myText += `<div>
+    <div class="leftcol">
+      <h5>${jobName3}</h5>
+      <h6>${jobStart3} - ${jobEnd3}</h6>
+      <h6>${jobLoc3}</h6>
+    </div>
+    <div class="rightcol">
+      <h5>${jobTitle3}</h5>
+      <h6>${jobDesc3}</h6>
+    </div>
+  </div>\n`;
+  }
+  myText += `</div>
             <hr>
               <h3>EDUCATION</h3>
-              <div class="education">
-                <div>
-                  <div class="leftcol">
-                    <h5>Wake Tech Community College</h5>
-                    <h6>Dec 2020 - Current</h6>
-                    <h6>Raleigh, NC</h6>
-                  </div>
-                  <div class="rightcol">
-                    <h5>Associates in Computer Programming</h5>
-                    <h6>Currently pursuing an associates in computer programming, undecided on where to transfer to complete
-                      my bachelors.</h6>
-                  </div>
-                </div>
-                <div>
-                  <div class="leftcol">
-                    <h5>Wake STEM Early College High School</h5>
-                    <h6>Aug 2015 - Dec 2020</h6>
-                    <h6>Raleigh, NC</h6>
-                  </div>
-                  <div class="rightcol">
-                    <h5>GED</h5>
-                    <h6>Wake STEM focused on teamwork and project-based learning that has greatly benefited me in my current
-                      studies and out of school projects. All courses were honors level in order to allow us to take a full
-                      college courseload for our optional fifth year.</h6>
-                  </div>
-                </div>
-              </div>
+              <div class="education">\n`;
+  if (schoolName1 != "") {
+    myText += `<div>
+    <div class="leftcol">
+      <h5>${schoolName1}</h5>
+      <h6>${schoolStart1} - ${schoolEnd1}</h6>
+      <h6>${schoolLoc1}</h6>
+    </div>
+    <div class="rightcol">
+      <h5>${schoolDeg1}</h5>
+      <h6>${schoolDesc1}</h6>
+    </div>
+  </div>\n`;
+  }
+  if (schoolName2 != "") {
+    myText += `<div>
+    <div class="leftcol">
+      <h5>${schoolName2}</h5>
+      <h6>${schoolStart2} - ${schoolEnd2}</h6>
+      <h6>${schoolLoc2}</h6>
+    </div>
+    <div class="rightcol">
+      <h5>${schoolDeg2}</h5>
+      <h6>${schoolDesc2}</h6>
+    </div>
+  </div>\n`;
+  }
+  myText += `</div>
               <hr>
                 <h3>LANGUAGES/FRAMEWORKS</h3>
                 <div class="skills">
-                  <div class="leftcol">
-                    <h5>C++</h5>
-                    <ul>
-                      <li>SFML</li>
-                      <li>SDL</li>
-                      <li>Windows API</li>
-                      <li>OpenFrameworks</li>
-                    </ul>
-                    <h5>Javascript</h5>
-                    <ul>
-                      <li>ReactJS</li>
-                      <li>NodeJS</li>
-                      <li>Express</li>
-                    </ul>
-                    <h5>Java</h5>
-                    <ul>
-                      <li>Processing</li>
-                      <li>Fabric</li>
-                      <li>Selenium</li>
-                    </ul>
-                  </div>
-                  <div class="rightcol">
-                    <h5>C#</h5>
-                    <ul>
-                      <li>ASP.NET</li>
-                      <li>Selenium</li>
-                      <li>UnityEngine</li>
-                      <li>WinForm</li>
-                    </ul>
-                    <h5>Python</h5>
-                    <ul>
-                      <li>OpenCL</li>
-                      <li>Discord.py</li>
-                      <li>PyGame</li>
-                    </ul>
-                    <h5>AutoHotKey</h5>
-                  </div>
+                  <div class="leftcol">\n`;
+  for (let i = 0; i < languages.length / 2; i++) {
+    myText += `<h5>${languages[i]}</h5>\n<ul>\n`;
+    let fw = frameworks[i].split(',');
+    for (let j = 0; j < fw.length; j++) {
+      myText += `<li>${fw[j]}</li>\n`;
+    }
+    myText += `</ul>\n`;
+  }
+  myText += `</div>
+                  <div class="rightcol">\n`;
+  for (let i = languages.length / 2; i < languages.length; i++) {
+    myText += `<h5>${languages[i]}</h5>\n`;
+    let fw = frameworks[i].split(',');
+    if (fw.length == 0 || fw[0] == "") continue;
+    myText += "<ul>\n";
+    console.log(languages[i], fw);
+    for (let j = 0; j < fw.length; j++) {
+      myText += `<li>${fw[j]}</li>\n`;
+    }
+    myText += `</ul>\n`;
+  }
+  myText += `</div>
                 </div>
                 <hr>
                   <h3>SHOWCASE PROJECT</h3>
                   <div class="project">
-                    <a href="https://www.youtube.com/watch?v=8_zC0eIjtkM" target="_blank">
-                      <h5>Particle Flow Field (Video)</h5>
+                    <a href="${projectlink}" target="_blank">
+                      <h5>${project} (Link)</h5>
                     </a>
-                    <p>Particle system that uses Perlin noise to drive the movement of particles. Forming groups of particles
-                      that follow similar paths. Each particle paints a small amount onto the canvas to create a string-like
-                      pattern on the canvas.</p>
+                    <p>${projectdesc}</p>
                   </div>
-                </div>
+                <hr>
+                <h3>REFERENCES</h3>
+                <div class="refs">\n`;
+  references.forEach(ref => {
+    myText += `<h4>${ref}</h4>`;
+  })
+  myText += `</div>
               </div>
             </div>
           </body>
@@ -253,7 +292,7 @@ function fillFields() {
     `Love trying new frameworks/languages and recreating/improving upon old projects to become familiar in new environments.\n` +
     `Familiar in Unix, Windows, and tinkering with microcontrollers like the Arduino and Teensy 3.`;
   document.getElementById("project").value = "Particle Flow Field";
-  document.getElementById("projectdesc").value = "Particle system that uses Perlin noise to drive the movement of particles. Forming groups of particles that follow similar paths. Each particle paints a small amount onto the canvas to create a string-like field.";
+  document.getElementById("projectdesc").value = "Particle system that uses Perlin noise to drive the movement of particles. Forming groups of particles that follow similar paths. Each particle paints a small amount onto the canvas to create a string-like pattern on the canvas.";
   document.getElementById("projectlink").value = "https://www.youtube.com/watch?v=8_zC0eIjtkM";
 
 
@@ -263,13 +302,16 @@ function fillFields() {
 
   document.getElementById("school1").value = "Wake STEM Early College High School";
   document.getElementById("schoollocation1").value = "Raleigh";
-  document.getElementById("graddate1").value = "2020-12-12";
-  document.getElementById("graddeg1").value = "GED"
+  document.getElementById("schoolStart1").value = "2015-08-01";
+  document.getElementById("schoolEnd1").value = "2020-12-01";
+  document.getElementById("schoolDeg1").value = "GED";
+  document.getElementById("schoolDesc1").value = "Wake STEM focused on teamwork and project-based learning that has greatly benefited me in my current studies and out of school projects. All courses were honors level in order to allow us to take a full college courseload for our optional fifth year.";
 
   document.getElementById("school2").value = "Wake Tech Community College";
   document.getElementById("schoollocation2").value = "Raleigh";
-  document.getElementById("graddate2").value = "";
-  document.getElementById("graddeg2").value = "Associates in Computer Programming"
+  document.getElementById("schoolStart2").value = "2021-01-07";
+  document.getElementById("schoolDeg2").value = "Associates in Computer Programming"
+  document.getElementById("schoolDesc2").value = "Currently pursuing an associates in computer programming, undecided on where to transfer to complete my bachelors.";
 
 
   document.getElementById("certs").value = `C++ (Sololearn)\n` +
