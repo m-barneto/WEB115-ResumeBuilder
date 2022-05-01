@@ -74,161 +74,159 @@ function generateResume() {
   <div class="container">
     <div class="sidebar">
       <div class="center-img">
-        <img src="` + "picture" + `" alt="user picture">
+        <img src="${picture}" alt="user picture">
       </div>
       <hr>
       <h3>OBJECTIVE</h3>
-      <p>Current student at Wake Tech Community College. I'm pursuing an associates in programming and development with
-        a specialization in C++ and Java.
-        I'm looking for a job in software development but have experience with projects in a multitude of environments
-        and stacks.</p>
+      <p>${objective}</p>
       <hr>
       <h3>CONTACT INFO</h3>
-      <p>Email: email@waketech.edu</p>
-      <p>Phone: (919) 895-5453</p>
+      <p>Email: ${email}</p>
+      <p>Phone: ${phone}</p>
       <hr>
       <h3>SKILLS</h3>
-      <ul>
-        <li>Persistant, with the desire to create something I can be proud of being a part of.</li>
-        <li>Love trying new frameworks/languages and recreating/improving upon old projects to become familiar in
-          new environments.</li>
-        <li>Familiar in Unix, Windows, and tinkering with microcontrollers like the Arduino and Teensy 3.</li>
-      </ul>
-      <hr>
+      <ul>\n`;
+  devskills.forEach(skill => {
+    console.log(skill);
+    myText += "<li>" + skill + "</li>\n";
+  });
+  myText +=
+    `</ul>
+    <hr>
       <h3>CERTIFICATES</h3>
       <ul>
         <li>C++ (Sololearn)</li>
         <li>C# (Sololearn)</li>
       </ul>
       <hr>
-    </div>
-    <div class="content">
-      <div class="heading">
-        <div class="leftcol">
-          <h1>MATTHEW<br>BARNETO</h1>
-        </div>
-        <div class="rightcol">
-          <div>
-            <span class="material-icons">place</span>
-            <p>Address</p>
-          </div>
-          <div>
-            <span class="material-icons">call</span>
-            <p>Phone #</p>
-          </div>
-          <div>
-            <span class="material-icons">mail</span>
-            <p>Email</p>
-          </div>
-        </div>
       </div>
-      <div class="body">
-        <hr id="top-hr">
-        <h3>WORK EXPERIENCE</h3>
-        <div class="job">
-          <div>
-            <div class="leftcol">
-              <h5>Coffee Shop</h5>
-              <h6>Apr 2020 - Current</h6>
-              <h6>Raleigh, NC</h6>
-            </div>
-            <div class="rightcol">
-              <h5>Barista</h5>
-              <h6>Working as a barista I've developed a love for creating things with my hands. As well as creating and
-                maintaining relationships with customers.</h6>
-            </div>
-          </div>
-        </div>
-
-        <hr>
-        <h3>EDUCATION</h3>
-        <div class="education">
-          <div>
-            <div class="leftcol">
-              <h5>Wake Tech Community College</h5>
-              <h6>Dec 2020 - Current</h6>
-              <h6>Raleigh, NC</h6>
-            </div>
-            <div class="rightcol">
-              <h5>Associates in Computer Programming</h5>
-              <h6>Currently pursuing an associates in computer programming, undecided on where to transfer to complete
-                my bachelors.</h6>
-            </div>
-          </div>
-          <div>
-            <div class="leftcol">
-              <h5>Wake STEM Early College High School</h5>
-              <h6>Aug 2015 - Dec 2020</h6>
-              <h6>Raleigh, NC</h6>
-            </div>
-            <div class="rightcol">
-              <h5>GED</h5>
-              <h6>Wake STEM focused on teamwork and project-based learning that has greatly benefited me in my current
-                studies and out of school projects. All courses were honors level in order to allow us to take a full
-                college courseload for our optional fifth year.</h6>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <h3>LANGUAGES/FRAMEWORKS</h3>
-        <div class="skills">
+      <div class="content">
+        <div class="heading">
           <div class="leftcol">
-            <h5>C++</h5>
-            <ul>
-              <li>SFML</li>
-              <li>SDL</li>
-              <li>Windows API</li>
-              <li>OpenFrameworks</li>
-            </ul>
-            <h5>Javascript</h5>
-            <ul>
-              <li>ReactJS</li>
-              <li>NodeJS</li>
-              <li>Express</li>
-            </ul>
-            <h5>Java</h5>
-            <ul>
-              <li>Processing</li>
-              <li>Fabric</li>
-              <li>Selenium</li>
-            </ul>
+            <h1>MATTHEW<br>BARNETO</h1>
           </div>
           <div class="rightcol">
-            <h5>C#</h5>
-            <ul>
-              <li>ASP.NET</li>
-              <li>Selenium</li>
-              <li>UnityEngine</li>
-              <li>WinForm</li>
-            </ul>
-            <h5>Python</h5>
-            <ul>
-              <li>OpenCL</li>
-              <li>Discord.py</li>
-              <li>PyGame</li>
-            </ul>
-            <h5>AutoHotKey</h5>
+            <div>
+              <span class="material-icons">place</span>
+              <p>Address</p>
+            </div>
+            <div>
+              <span class="material-icons">call</span>
+              <p>Phone #</p>
+            </div>
+            <div>
+              <span class="material-icons">mail</span>
+              <p>Email</p>
+            </div>
           </div>
         </div>
-        <hr>
-        <h3>SHOWCASE PROJECT</h3>
-        <div class="project">
-          <a href="https://www.youtube.com/watch?v=8_zC0eIjtkM" target="_blank">
-            <h5>Particle Flow Field (Video)</h5>
-          </a>
-          <p>Particle system that uses Perlin noise to drive the movement of particles. Forming groups of particles
-            that follow similar paths. Each particle paints a small amount onto the canvas to create a string-like
-            pattern on the canvas.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+        <div class="body">
+          <hr id="top-hr">
+            <h3>WORK EXPERIENCE</h3>
+            <div class="job">
+              <div>
+                <div class="leftcol">
+                  <h5>Coffee Shop</h5>
+                  <h6>Apr 2020 - Current</h6>
+                  <h6>Raleigh, NC</h6>
+                </div>
+                <div class="rightcol">
+                  <h5>Barista</h5>
+                  <h6>Working as a barista I've developed a love for creating things with my hands. As well as creating and
+                    maintaining relationships with customers.</h6>
+                </div>
+              </div>
+            </div>
 
-</html>
-  `;
+            <hr>
+              <h3>EDUCATION</h3>
+              <div class="education">
+                <div>
+                  <div class="leftcol">
+                    <h5>Wake Tech Community College</h5>
+                    <h6>Dec 2020 - Current</h6>
+                    <h6>Raleigh, NC</h6>
+                  </div>
+                  <div class="rightcol">
+                    <h5>Associates in Computer Programming</h5>
+                    <h6>Currently pursuing an associates in computer programming, undecided on where to transfer to complete
+                      my bachelors.</h6>
+                  </div>
+                </div>
+                <div>
+                  <div class="leftcol">
+                    <h5>Wake STEM Early College High School</h5>
+                    <h6>Aug 2015 - Dec 2020</h6>
+                    <h6>Raleigh, NC</h6>
+                  </div>
+                  <div class="rightcol">
+                    <h5>GED</h5>
+                    <h6>Wake STEM focused on teamwork and project-based learning that has greatly benefited me in my current
+                      studies and out of school projects. All courses were honors level in order to allow us to take a full
+                      college courseload for our optional fifth year.</h6>
+                  </div>
+                </div>
+              </div>
+              <hr>
+                <h3>LANGUAGES/FRAMEWORKS</h3>
+                <div class="skills">
+                  <div class="leftcol">
+                    <h5>C++</h5>
+                    <ul>
+                      <li>SFML</li>
+                      <li>SDL</li>
+                      <li>Windows API</li>
+                      <li>OpenFrameworks</li>
+                    </ul>
+                    <h5>Javascript</h5>
+                    <ul>
+                      <li>ReactJS</li>
+                      <li>NodeJS</li>
+                      <li>Express</li>
+                    </ul>
+                    <h5>Java</h5>
+                    <ul>
+                      <li>Processing</li>
+                      <li>Fabric</li>
+                      <li>Selenium</li>
+                    </ul>
+                  </div>
+                  <div class="rightcol">
+                    <h5>C#</h5>
+                    <ul>
+                      <li>ASP.NET</li>
+                      <li>Selenium</li>
+                      <li>UnityEngine</li>
+                      <li>WinForm</li>
+                    </ul>
+                    <h5>Python</h5>
+                    <ul>
+                      <li>OpenCL</li>
+                      <li>Discord.py</li>
+                      <li>PyGame</li>
+                    </ul>
+                    <h5>AutoHotKey</h5>
+                  </div>
+                </div>
+                <hr>
+                  <h3>SHOWCASE PROJECT</h3>
+                  <div class="project">
+                    <a href="https://www.youtube.com/watch?v=8_zC0eIjtkM" target="_blank">
+                      <h5>Particle Flow Field (Video)</h5>
+                    </a>
+                    <p>Particle system that uses Perlin noise to drive the movement of particles. Forming groups of particles
+                      that follow similar paths. Each particle paints a small amount onto the canvas to create a string-like
+                      pattern on the canvas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </body>
+
+        </html>
+        `;
   flyWindow.document.write(myText);
-  flyWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
+  //flyWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
 }
 
 document.getElementById("fillfields").addEventListener("click", fillFields);
@@ -247,13 +245,13 @@ function fillFields() {
 
 
   document.getElementById("objective").value =
-    `Current student at Wake Tech Community College. I'm pursuing an associates in programming and development with a specialization in C++ and Java. 
-    I'm looking for a job in software development but have experience with projects in a multitude of environments and stacks.`;
+    `Current student at Wake Tech Community College. I'm pursuing an associates in programming and development with ` +
+    `a specialization in C++ and Java. I'm looking for a job in software development but have experience with projects ` +
+    `in a multitude of environments and stacks.`;
   document.getElementById("devskills").value =
-    `Persistant, with a desire to create something I can be proud to be a part of.\n
-    Love trying new frameworks and languages and recreating/improving upon old projects to become familiar in new environments.\n
-    Familiar in Unix, Windows, and tinkering with microcontrollers like the Arduino and Teensy 3.
-    `;
+    `Persistant, with the desire to create something I can be proud of being a part of.\n` +
+    `Love trying new frameworks/languages and recreating/improving upon old projects to become familiar in new environments.\n` +
+    `Familiar in Unix, Windows, and tinkering with microcontrollers like the Arduino and Teensy 3.`;
   document.getElementById("project").value = "Particle Flow Field";
   document.getElementById("projectdesc").value = "Particle system that uses Perlin noise to drive the movement of particles. Forming groups of particles that follow similar paths. Each particle paints a small amount onto the canvas to create a string-like field.";
   document.getElementById("projectlink").value = "https://www.youtube.com/watch?v=8_zC0eIjtkM";
@@ -274,7 +272,8 @@ function fillFields() {
   document.getElementById("graddeg2").value = "Associates in Computer Programming"
 
 
-  document.getElementById("certs").value = "SoloLearn: C++, C#";
+  document.getElementById("certs").value = `C++ (Sololearn)\n` +
+    `C# (Sololearn)`;
 
 
   document.getElementById("job1").value = "Coffee Shop";
