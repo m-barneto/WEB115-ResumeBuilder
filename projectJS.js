@@ -103,8 +103,8 @@ function generateResume() {
       <h3>CONTACT INFO</h3>
       <p>Email: ${email}</p>
       <p>Phone: ${phone}</p>
-      <p>LinkedIn: <a href="${linkedin}" style="color: aliceblue;">(Link)</a></p>
-      <p>Portfolio: <a href="${portfolio}" style="color: aliceblue;">(Link)</a></p>
+      <p>LinkedIn: <a href="${linkedin}" style="color: aliceblue;" target="_blank">(Link)</a></p>
+      <p>Portfolio: <a href="${portfolio}" style="color: aliceblue;" target="_blank">(Link)</a></p>
       <hr>
       <h3>SKILLS</h3>
       <ul>\n`;
@@ -275,7 +275,7 @@ function fillFields() {
   document.getElementById("email").value = "email@waketech.edu";
   document.getElementById("phone").value = "(919) 895-5453";
   document.getElementById("linkedin").value = "https://www.linkedin.com/in/matthew-barneto-013bb2232";
-  document.getElementById("portfolio").value = "https://m-barneto.github.io/";
+  document.getElementById("portfolio").value = "https://github.com/m-barneto";
   document.getElementById("picture").value = "https://drive.google.com/uc?id=1uYwFmerP8ov7vfTBt4XNjNBVC3hpUwc3";
   document.getElementById("state").value = "NC";
   document.getElementById("city").value = "Raleigh";
