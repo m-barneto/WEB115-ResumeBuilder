@@ -103,6 +103,8 @@ function generateResume() {
       <h3>CONTACT INFO</h3>
       <p>Email: ${email}</p>
       <p>Phone: ${phone}</p>
+      <p>LinkedIn: <a href="${linkedin}" style="color: aliceblue;">(Link)</a></p>
+      <p>Portfolio: <a href="${portfolio}" style="color: aliceblue;">(Link)</a></p>
       <hr>
       <h3>SKILLS</h3>
       <ul>\n`;
@@ -130,7 +132,7 @@ function generateResume() {
           <div class="rightcol">
             <div>
               <span class="material-icons">place</span>
-              <p>${address}</p>
+              <p>${city + ", " + state}</p>
             </div>
             <div>
               <span class="material-icons">call</span>
