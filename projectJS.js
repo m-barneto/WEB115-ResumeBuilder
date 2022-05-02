@@ -11,7 +11,7 @@ function getDate(id) {
 }
 
 document.getElementById("submit").addEventListener("click", generateResume);
-fillFields();
+//fillFields();
 function generateResume() {
   if (!document.getElementById("email").validity.valid) return;
   let name = getValue("name").toString().split(' ');
@@ -125,7 +125,7 @@ function generateResume() {
       <div class="content">
         <div class="heading">
           <div class="leftcol">
-            <h1>${firstname + (name[1] == null ? "" : `<br>${lastname}`)}</h1>
+            <h1>${firstname.toUpperCase() + (name[1] == null ? "" : `<br>${lastname.toUpperCase()}`)}</h1>
           </div>
           <div class="rightcol">
             <div>
@@ -186,7 +186,6 @@ function generateResume() {
   </div>\n`;
   }
   myText += `</div>
-            <hr>
               <h3>EDUCATION</h3>
               <div class="education">\n`;
   if (schoolName1 != "") {
@@ -243,13 +242,12 @@ function generateResume() {
   }
   myText += `</div>
                 </div>
-                <hr>
                   <h3>SHOWCASE PROJECT</h3>
                   <div class="project">
                     <a href="${projectlink}" target="_blank">
                       <h5>${project} (Link)</h5>
                     </a>
-                    <p>${projectdesc}</p>
+                    <h6>${projectdesc}</h6>
                   </div>
                 <hr>
                 <h3>REFERENCES</h3>
@@ -260,8 +258,8 @@ function generateResume() {
   myText += `</div>
               </div>
             </div>
+            <script src="sizeFixer.js"></script>
           </body>
-
         </html>
         `;
   flyWindow.document.write(myText);
@@ -297,21 +295,20 @@ function fillFields() {
 
 
   document.getElementById("languages").value = "C++\nJavascript\nJava\nC#\nPython\nAutoHotkey";
-  document.getElementById("frameworks").value = "SFML,SDL,Windows API,OpenFrameworks\nReactJS,NodeJS,Express\nProcessing,Fabric,Selenium\nASP.NET,Selenium,UnityEngine,WinForm\nOpenCL,Discord.py,PyGame\n,";
+  document.getElementById("frameworks").value = "SFML,SDL,Windows API,OpenFrameworks\nReactJS,NodeJS,Express\nProcessing,Fabric\nASP.NET,Selenium,UnityEngine,WinForm\nOpenCL,Discord.py,PyGame\n,";
 
-
-  document.getElementById("school1").value = "Wake STEM Early College High School";
+  document.getElementById("school1").value = "Wake Tech Community College";
   document.getElementById("schoollocation1").value = "Raleigh";
-  document.getElementById("schoolStart1").value = "2015-08-01";
-  document.getElementById("schoolEnd1").value = "2020-12-01";
-  document.getElementById("schoolDeg1").value = "GED";
-  document.getElementById("schoolDesc1").value = "Wake STEM focused on teamwork and project-based learning that has greatly benefited me in my current studies and out of school projects. All courses were honors level in order to allow us to take a full college courseload for our optional fifth year.";
+  document.getElementById("schoolStart1").value = "2021-01-07";
+  document.getElementById("schoolDeg1").value = "Associates in Computer Programming"
+  document.getElementById("schoolDesc1").value = "Currently pursuing an associates in computer programming, undecided on where to transfer to complete my bachelors.";
 
-  document.getElementById("school2").value = "Wake Tech Community College";
+  document.getElementById("school2").value = "Wake STEM Early College High School";
   document.getElementById("schoollocation2").value = "Raleigh";
-  document.getElementById("schoolStart2").value = "2021-01-07";
-  document.getElementById("schoolDeg2").value = "Associates in Computer Programming"
-  document.getElementById("schoolDesc2").value = "Currently pursuing an associates in computer programming, undecided on where to transfer to complete my bachelors.";
+  document.getElementById("schoolStart2").value = "2015-08-01";
+  document.getElementById("schoolEnd2").value = "2020-12-01";
+  document.getElementById("schoolDeg2").value = "GED";
+  document.getElementById("schoolDesc2").value = "Wake STEM focused on teamwork and project-based learning that has greatly benefited me in my current studies and out of school projects. All courses were honors level in order to allow us to take a full college courseload for our optional fifth year.";
 
 
   document.getElementById("certs").value = `C++ (Sololearn)\n` +

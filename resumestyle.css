@@ -2,22 +2,28 @@
   font-family: 'Roboto Mono', monospace;
 }
 
+:root {
+  --width: 8.5in;
+  --height: 11.2in;
+}
+
 html,
 body {
   margin: 0;
-  height: 100%;
+  height: var(--height);
+  width: var(--width);
 }
 
 .container {
   display: flex;
-  height: 100%;
+  height: var(--height);
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
   flex: 0 0 30%;
-  height: 100%;
+  height: var(--height);
   background-color: #2A3949;
 }
 
@@ -30,9 +36,9 @@ body {
 
 .sidebar>.center-img>img {
   object-fit: cover;
-  width: 24vw;
-  height: 24vw;
-  border-radius: 24vw;
+  width: calc(var(--width) * .24);
+  height: calc(var(--width) * .24);
+  border-radius: calc(var(--width) * .24);
 }
 
 .sidebar>p {
@@ -93,7 +99,7 @@ div.rightcol {
 }
 
 .heading {
-  height: 24vw;
+  height: calc(var(--width) * .24);
   width: 100%;
   margin: 15px;
   padding: 0px;
@@ -152,24 +158,16 @@ div.rightcol {
   height: 2px;
 }
 
-.job,
-.education {
-  height: 90px;
-  /* Max between leftcol & rightcol's height */
-}
-
-.skills {
-  height: 250px;
-}
-
 .body>div>div>h4,
 .body>div>div>h5,
-.body>div>div>div>h6 {
+.body>div>div>div>h6,
+.project>h6 {
   margin: 5px;
   color: #2A3949;
 }
 
-.body>div>div>div>h6 {
+.body>div>div>div>h6,
+.project>h6 {
   font-weight: 400;
 }
 
