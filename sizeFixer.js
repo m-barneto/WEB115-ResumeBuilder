@@ -19,8 +19,6 @@ eduDiv.style.height = `${eduHeight}px`;
 
 let skillsDiv = document.getElementsByClassName("skills")[0];
 let skills = skillsDiv.children;
-console.log(skills[0].offsetHeight);
-console.log(skills[1].offsetHeight);
 let skillsHeight = 40 + Math.max(skills[0].offsetHeight, skills[1].offsetHeight);
 
 skillsDiv.style.height = `${skillsHeight}px`;

@@ -57,7 +57,6 @@ function generateResume() {
   let jobTitle1 = getValue("job1title");
   let jobLoc1 = getValue("job1location");
   let jobStart1 = getDate("entrydate1");
-  console.log(jobStart1);
   let jobEnd1 = getDate("exitdate1");
   let jobDesc1 = getValue("jobdesc1");
 
@@ -109,7 +108,6 @@ function generateResume() {
       <h3>SKILLS</h3>
       <ul>\n`;
   devskills.forEach(skill => {
-    console.log(skill);
     myText += "<li>" + skill + "</li>\n";
   });
   myText +=
@@ -119,7 +117,6 @@ function generateResume() {
       <ul>\n`
   certs.forEach(cert => {
     myText += `<li>${cert}</li>\n`;
-    console.log(cert);
   });
   myText += `</ul>
       <hr>
@@ -232,11 +229,11 @@ function generateResume() {
   myText += `</div>
                   <div class="rightcol">\n`;
   for (let i = languages.length / 2; i < languages.length; i++) {
+    if (frameworks[i] === undefined) continue;
     myText += `<h5>${languages[i]}</h5>\n`;
     let fw = frameworks[i].split(',');
     if (fw.length == 0 || fw[0] == "") continue;
     myText += "<ul>\n";
-    console.log(languages[i], fw);
     for (let j = 0; j < fw.length; j++) {
       myText += `<li>${fw[j]}</li>\n`;
     }
